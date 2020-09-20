@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		Java 从打怪升级开始：艾莉、变量和数据类型 | 
+	 
+	知识铺
+	</title>
+	
+	<!-- keywords,description -->
+	
+		<meta name="keywords" content="知识铺" />
+	 
+		<meta name="description" content="知识铺" />
+	
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+  
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+
+	
+	
+		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+	<header id="header">
+    <a id="title" href="/" class="logo">知识铺</a>
+
+	<ul id="menu">
+		<li class="menu-item">
+			<a href="https://blog.zshipu.com"  target="_blank" class="menu-item-link" >博客</a>
+		</li>
+		<li class="menu-item">
+			<a href="/topSegmentfault"  target="_blank" class="menu-item-link" >Segmentfault</a>
+		</li>
+		<li class="menu-item">
+			<a href="/topopencn"  target="_blank" class="menu-item-link" >开源中国</a>
+		</li>
+		<li class="menu-item">
+			<a href="/topcsdn"  target="_blank" class="menu-item-link" >CSDN</a>
+		</li>
+		<li class="menu-item">
+			<a href="/topjuejin"  target="_blank" class="menu-item-link" >掘金</a>
+		</li>
+		<li class="menu-item">
+			<a href="/toplinuxcn"  target="_blank" class="menu-item-link" >Linux中国</a>
+		</li>
+		<li class="menu-item">
+			<a href="/topgoforum"  target="_blank" class="menu-item-link" >go语言中文网</a>
+		</li>
+		<li class="menu-item">
+			<a href="/about"  target="_blank" class="menu-item-link" >ABOUT</a>
+		</li>
+	</ul>
+</header>
+
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="text" placeholder="search...">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/19/2020%E5%B9%B49%E6%9C%88%E6%9C%9F%E5%88%8A%EF%BC%9A%E7%A7%91%E6%8A%80%E8%A6%81%E9%97%BB/">
+										2020年9月期刊：科技要闻
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/20/CSS%20%E7%83%AD%E7%82%B9%E6%96%87%E7%AB%A0%EF%BC%9A2020%E5%B9%B49%E6%9C%88%E7%AC%AC%E4%B8%89%E5%91%A8/">
+										CSS 热点文章：2020年9月第三周
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/20/CSS%E7%B3%BB%E5%88%97%EF%BC%9ACSS%E6%B8%90%E5%8F%98%E8%89%B2/">
+										CSS系列：CSS渐变色
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/20/Flutter%20%E7%83%AD%E7%82%B9%E6%96%87%E7%AB%A0%EF%BC%9A2020%E5%B9%B49%E6%9C%88%E7%AC%AC%E4%B8%89%E5%91%A8/">
+										Flutter 热点文章：2020年9月第三周
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/20/Github%20%E7%B3%BB%E5%88%97%EF%BC%9A%E5%9C%A8%20GitHub%20%E4%B8%8A%E8%8E%B7%E5%8F%96%20100%20%E9%A2%97%E6%98%9F%E7%9A%84%208%20%E4%B8%AA%E6%AD%A5%E9%AA%A4/">
+										Github 系列：在 GitHub 上获取 100 颗星的 8 个步骤
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/20/Golang%202020%E5%B9%B49%E6%9C%88%E7%AC%AC%E4%B8%89%E5%91%A8%E7%83%AD%E7%82%B9%E6%96%87%E7%AB%A0/">
+										Golang 2020年9月第三周热点文章
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/20/Golang%20%E7%83%AD%E7%82%B9%E6%8A%80%E6%9C%AF%EF%BC%9A2020-09-20%E6%9C%9F/">
+										Golang 热点技术：2020-09-20期
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/20/Java%20%E4%BB%8E%E6%89%93%E6%80%AA%E5%8D%87%E7%BA%A7%E5%BC%80%E5%A7%8B%EF%BC%9A%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%AD%A6%E4%B9%A0%20Java%20%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B/">
+										Java 从打怪升级开始：从零开始学习 Java 语言编程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/20/Java%20%E4%BB%8E%E6%89%93%E6%80%AA%E5%8D%87%E7%BA%A7%E5%BC%80%E5%A7%8B%EF%BC%9A%E5%87%86%E5%A4%87%E5%A5%BD%E5%BC%80%E5%A7%8B%E7%AC%AC%E4%B8%80%E4%B8%AA%E7%A8%8B%E5%BA%8F/">
+										Java 从打怪升级开始：准备好开始第一个程序
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file active">
+									<a href="/2020/09/20/Java%20%E4%BB%8E%E6%89%93%E6%80%AA%E5%8D%87%E7%BA%A7%E5%BC%80%E5%A7%8B%EF%BC%9A%E8%89%BE%E8%8E%89%E3%80%81%E5%8F%98%E9%87%8F%E5%92%8C%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
+										Java 从打怪升级开始：艾莉、变量和数据类型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/20/Java%20%E4%BB%8E%E6%89%93%E6%80%AA%E5%8D%87%E7%BA%A7%E5%BC%80%E5%A7%8B%EF%BC%9A%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%92%8C%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%91%BD%E4%BB%A4/">
+										Java 从打怪升级开始：虚拟机和第一个命令
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/20/Java%20%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%EF%BC%9A%E6%83%B3%E8%A6%81%E5%BF%AB%E9%80%9F%E5%AD%A6%E4%B9%A0%20Java%EF%BC%9F%E7%83%A7%E6%8E%89%E6%89%80%E6%9C%89%20Java%20%E6%95%99%E7%A8%8B%E4%B9%A6%E7%B1%8D%20%E5%89%8D%E8%A8%80/">
+										Java 从零开始：想要快速学习 Java？烧掉所有 Java 教程书籍 前言
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/20/Java%20%E6%84%9F%E6%83%B3%EF%BC%9A%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E5%96%9C%E6%AC%A2Java/">
+										Java 感想：为什么我喜欢Java
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/20/Java%20%E7%83%AD%E7%82%B9%E6%96%87%E7%AB%A0%202020%E5%B9%B49%E6%9C%88%E7%AC%AC%E4%B8%89%E5%91%A8/">
+										Java 热点文章 2020年9月第三周
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/20/Mybatis%20%E7%83%AD%E7%82%B9%E6%96%87%E7%AB%A0%EF%BC%9A2020%E5%B9%B49%E6%9C%88%E7%AC%AC%E4%B8%89%E5%91%A8/">
+										Mybatis 热点文章：2020年9月第三周
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/20/Node.js%20%E7%83%AD%E7%82%B9%E6%96%87%E7%AB%A0%EF%BC%9A2020%E5%B9%B49%E6%9C%88%E7%AC%AC%E4%B8%89%E5%91%A8/">
+										Node.js 热点文章：2020年9月第三周
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/20/Spring%20%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0%EF%BC%9A2020%E5%B9%B49%E6%9C%88%E7%AC%AC%E4%B8%89%E5%91%A8/">
+										Spring 热门文章：2020年9月第三周
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/20/Web%E6%8A%80%E6%9C%AF%EF%BC%9A%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E5%85%B7%E6%9E%84%E5%BB%BA%20300%20%E5%A4%9A%E4%B8%AA%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/">
+										Web技术：如何使用自动化工具构建 300 多个开源项目
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/19/hexo%20%E9%BB%91%E7%A7%91%E6%8A%80%EF%BC%9Ago%E8%B0%83%E7%94%A8%E5%91%BD%E4%BB%A4%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90/">
+										hexo 黑科技：go调用命令自动生成
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content">
+		<h1 id="article-title">
+
+	Java 从打怪升级开始：艾莉、变量和数据类型
+</h1>
+<div class="article-meta">
+	
+	<span>知识铺</span>
+	<span>2020-09-20 22:13:19</span>
+    
+		<div id="article-categories">
+            
+		</div>
+    
+</div>
+
+<div id="article-content">
+	<p>  <jr-tutorial-lecture-dynamic-content _ngcontent-jr-site-c193="" _nghost-jr-site-c191="" class="ng-star-inserted"><jr-text-content _nghost-jr-site-c94="" class="ng-star-inserted"><jr-content _ngcontent-jr-site-c94="" classname="lecture-content post-content" _nghost-jr-site-c93=""><img src="https://cdn.codegym.cc/images/article/b7adf6cb-9b01-40bc-b249-638acc575918/800.webp" alt="image-zho-CN-00-14"></p>
+<p>一个粉红色头发的女人进入了船舱。“我想知道是否所有人类女性都有这样的头发，”阿米戈在想。</p>
+<p>“嗨！我叫埃莉诺•凯瑞 (Eleanor Carrey)。你可以叫我艾莉。我是银河系狂奔号的导航员。”</p>
+<p>“嗨，艾莉，”阿米戈逼着自己说道。</p>
+<p>“我将讲解整个 Java 语言中最有趣的部分：变量。”</p>
+<p>“我准备好听讲了。你说的这些变量是什么？”</p>
+<p>“变量是用来存储数据的特殊实体。任何数据。在 Java 语言中，所有数据都存储在变量中。最接近的比喻就好比是一个盒子。”</p>
+<p>“一个盒子？什么样的盒子？”</p>
+<p>“任何一个旧盒子。假设你在一张纸上写下数字 13，并把它放进一个盒子里。现在我们可以说，这个盒子里面存的是数值 13。”</p>
+<p>“在 Java 语言中，每个变量都有三个重要的属性：类型、名称和值。”</p>
+<p>“你能解释一下这是什么意思吗？”</p>
+<p>“当然。我们使用名称，这样我们可以将一个变量与另一个变量区分开来。这就像一个盒子上的标签。”</p>
+<p>“一个变量的类型决定了可以存储在其中的值/数据的类型。我们把帽子放进帽盒，把鞋子放进鞋盒，等等。”</p>
+<p>“值是存储在变量中的特定对象、数据或信息。”</p>
+<p>“你能告诉我关于类型的更多内容吗？”</p>
+<p>“当然。Java 语言中的每个对象都有一个特定的类型。例如整数、小数、文本、猫 (Cat)、房屋 (House) 等。”</p>
+<p>“变量也有类型。它只能存储类型与其自身相同的值。”</p>
+<p>“你可以在现实生活中看到这一点。不同种类的盒子用来储存不同的东西：”</p>
+<p><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://cdn.codegym.cc/images/article/4195b19c-af84-4642-abb9-ee6bbe83e5b4/original.jpeg"><img src="https://cdn.codegym.cc/images/article/4195b19c-af84-4642-abb9-ee6bbe83e5b4/original.jpeg"></a></p>
+<p>“要创建（或声明）一个变量，我们要使用类型的名称：<code>TypeName variableName</code>。”</p>
+<p>“下面是一些例子：”</p>
+<p>|  | 声明一个变量：<br>首先是类型，然后是名称。 | 说明 |<br>| 1 | <code>&lt;mark class=&quot;red&quot;&gt;int a&lt;/mark&gt;;</code> | 创建一个 <mark class="red">int</mark> 变量，其名称为 <mark class="red">a</mark>。 |<br>| 2 | <code>&lt;mark class=&quot;green&quot;&gt;String s&lt;/mark&gt;;</code> | 创建一个 <mark class="green">String</mark> 变量，其名称为 <mark class="green">s</mark>。 |<br>| 3 | <code>&lt;mark class=&quot;viola&quot;&gt;double c&lt;/mark&gt;;</code> | 创建一个 <mark class="viola">double</mark> 变量，其名称为 <mark class="viola">c</mark>。 |</p>
+<p>“两种最常见的类型是整数（使用 <mark class="red">int</mark> 来声明）和文本（使用 <mark class="green">String</mark> 来声明）。”</p>
+<p>“什么是 double？”</p>
+<p>“<strong>Double</strong> 是分数，或实数。”</p>
+<p>“你说变量有三个属性：类型、名称和值。但我只能看到两个属性。所以，我的问题是，如何给变量赋值？”</p>
+<p>“让我们回到那个盒子的类比。想象一下，你拿一张纸，写下数字 42，然后把它放进盒子里。现在盒子里存的值是 42。”</p>
+<p>“我明白了。”</p>
+<p>“我们用一个特殊操作（<strong>赋值</strong>）为变量分配数值。赋值操作会将值从一个变量复制到另一个变量。它不会去移动数值。而是复制数值。就像磁盘上的文件。它的代码是这样的：“</p>
+<p>|  | 代码 | 说明 |<br>| 1 | <code>&lt;mark class=&quot;green&quot;&gt;i&lt;/mark&gt; = 3;</code> | 将数值 3 赋值给变量 <mark class="green">i</mark>。 |<br>| 2 | <code>&lt;mark class=&quot;green&quot;&gt;a&lt;/mark&gt; = 1; &lt;mark class=&quot;viola&quot;&gt;b&lt;/mark&gt; = &lt;mark class=&quot;green&quot;&gt;a&lt;/mark&gt;+1;</code> | 将数值 1 赋值给变量 <mark class="green">a</mark>。<br>将数值 2 赋值给变量 <mark class="viola">b</mark>。 |<br>| 3 | <code>&lt;mark&gt;x&lt;/mark&gt; = 3; &lt;mark&gt;x&lt;/mark&gt; = &lt;mark&gt;x&lt;/mark&gt; + 1;</code> | 将数值 3 赋值给变量 <mark>x</mark>。<br>在下一行中，<mark>x</mark> 的数值增加 1，使 x 等于4 |</p>
+<p>“为了执行赋值操作，我们使用<strong>等号</strong> (<code>=</code>)。”</p>
+<p>“我再说一遍：<strong>这不是进行比较</strong>。我们正在将等号右边的值复制给左边的变量。要进行比较，Java 语言会使用双等号 (<code>==</code>)。”</p>
+<p>“我知道如何将猫放入变量中了。就像一个程序。”</p>
+<p>“如何捉猫：</p>
+<p>1.拿一个空盒子。</p>
+<p>2.等等。”</p>
+<p><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://cdn.codegym.cc/images/article/a9a5ffcb-edb4-4a08-b4a4-c2b84cf197c2/original.jpeg"><img src="https://cdn.codegym.cc/images/article/a9a5ffcb-edb4-4a08-b4a4-c2b84cf197c2/original.jpeg"></a></p>
+<p>“不，阿米戈。你只能把一只猫塞进一个盒子里。呃，我的意思是你只能给一个变量赋一个值。”</p>
+<p>“我明白了。你能给我讲讲更多创建变量的例子吗？”</p>
+<p>“可以啊。让我再说一遍：要创建（或声明）变量，你需要使用‘<code>TypeName variableName</code>’名称。”</p>
+<p>|  | 代码 | 说明 |<br>| 1 | <code>String &lt;mark class=&quot;red&quot;&gt;s&lt;/mark&gt;;</code> | 创建了一个 <code>String</code> 变量，其名称为 <mark class="red">s</mark>。<br>此变量可以存储文本。 |<br>| 2 | <code>int &lt;mark&gt;x&lt;/mark&gt;;</code> | 创建了一个 <code>int</code> 变量，其名称为 <mark>x</mark>。<br>此变量可以存储整数。 |<br>| 3 | <code>int &lt;mark class=&quot;viola&quot;&gt;a&lt;/mark&gt;, &lt;mark class=&quot;user&quot;&gt;b&lt;/mark&gt;, &lt;mark class=&quot;green&quot;&gt;c&lt;/mark&gt;; int &lt;mark&gt;d&lt;/mark&gt;;</code> | 创建了四个 <code>int</code> 变量，其名称为 <mark class="viola">a</mark>、<mark class="user">b</mark>、<mark class="green">c</mark>和 <mark>d</mark>。<br>这些变量可以存储整数。 |</p>
+<p>“哦，现在我明白了！”</p>
+<p>“请记住，你不能在同一方法中创建两个名称相同的变量。”</p>
+<p>“在不同的方法中可以这样做吗？”</p>
+<p>“是的，你可以这样做。这就像在不同的房子里都有盒子一样。”</p>
+<p>“我能给一个变量取一个我喜欢的名字吗？”</p>
+<p>“基本上可以。变量名不能包含空格、加号、减号等。最好在一个变量名中只使用字母和数字。”</p>
+<p>“请记住，<strong>Java 语言区分大小写。</strong> <code>int a</code> 和 <code>Int a</code> 不同。”</p>
+<p>“顺便说一下，在 Java 语言中，你可以创建一个变量并同时为它赋值。这样可以节省时间和空间。”</p>
+<p>|  | 紧凑代码 | 等效代码（代码较长） |<br>| 1 | <code>int a = 5; int b = 6;</code> | <code>int a; a = 5; int b; b = 6;</code> |<br>| 2 | <code>int c = 7; int d = c+1;</code> | <code>int c; c = 7; int d; d = c+1;</code> |<br>| 3 | <code>String s = &quot;我是阿米戈&quot;;</code> | <code>String s; s = &quot;我是阿米戈&quot;;</code> |</p>
+<p>“这种方式代码更紧凑，更清晰。”</p>
+<p>“我们就是这么做的。”</p>
+<p>“每个 Java 新手都需要熟悉的两种类型：int（整数）和String（文本/字符串）。”</p>
+<p>“<strong>int</strong> 类型可以让你在变量中存储数字，并对其执行运算：加法、减法、乘法、除法等。”</p>
+<p>|  | 代码 | 说明 |<br>| 1 | <code>int &lt;mark&gt;x&lt;/mark&gt; = 1; int &lt;mark class=&quot;user&quot;&gt;y&lt;/mark&gt; = &lt;mark&gt;x&lt;/mark&gt;*2; int &lt;mark class=&quot;green&quot;&gt;z&lt;/mark&gt; = 5*&lt;mark class=&quot;user&quot;&gt;y&lt;/mark&gt;*&lt;mark class=&quot;user&quot;&gt;y&lt;/mark&gt; + 2*&lt;mark class=&quot;user&quot;&gt;y&lt;/mark&gt; + 3;</code> | <mark>x</mark> 等于 1<br><mark class="user">y</mark> 等于 2<br><mark class="green">z</mark> 等于 20+4+3，其结果等于 27 |<br>| 2 | <code>int &lt;mark class=&quot;user&quot;&gt;a&lt;/mark&gt; = 5; int &lt;mark class=&quot;green&quot;&gt;b&lt;/mark&gt; = 1; int &lt;mark class=&quot;viola&quot;&gt;c&lt;/mark&gt; = (&lt;mark class=&quot;user&quot;&gt;a&lt;/mark&gt;-&lt;mark class=&quot;green&quot;&gt;b&lt;/mark&gt;) * (&lt;mark class=&quot;user&quot;&gt;a&lt;/mark&gt;+&lt;mark class=&quot;green&quot;&gt;b&lt;/mark&gt;);</code> | <mark class="user">a</mark> 等于 5<br><mark class="green">b</mark> 等于 1<br><mark class="viola">c</mark> 等于 4x6，其结果为 24 |<br>| 3 | <code>int &lt;mark class=&quot;user&quot;&gt;a&lt;/mark&gt; = 64; int &lt;mark class=&quot;red&quot;&gt;b&lt;/mark&gt; = &lt;mark class=&quot;user&quot;&gt;a&lt;/mark&gt;/8; int &lt;mark class=&quot;viola&quot;&gt;c&lt;/mark&gt; = &lt;mark class=&quot;red&quot;&gt;b&lt;/mark&gt;/4; int &lt;mark&gt;d&lt;/mark&gt; = &lt;mark class=&quot;viola&quot;&gt;c&lt;/mark&gt;*3;</code> | <mark class="user">a</mark> 等于 64<br><mark class="red">b</mark> 等于 8<br><mark class="viola">c</mark> 等于 2<br><mark>d</mark> 等于 6 |</p>
+<p>“明白了。编程总是这么简单吗？”</p>
+<p>“事实上，是的。”</p>
+<p>“太好了！那么，接下来是什么？”</p>
+<p>“<strong>String</strong> 类型允许你存储多行的文本，也称为‘字符串’。”</p>
+<p>“要在 Java 中分配一个字符串，你需要将文本放在引号内。下面是一些示例：”</p>
+<p>|  | 代码 | 说明 |<br>| 1 | <code>String s = &quot;阿米戈&quot;;</code> | <code>s</code> 包含<code>“阿米戈”</code>。 |<br>| 2 | <code>String s = &quot;123&quot;;</code> | <code>s</code> 包含<code>“123”</code>。 |<br>| 3 | <code>String s = &quot;123 + 456&quot;;</code> | <code>s</code> 包含<code>“123 + 456”</code>。 |</p>
+<p>“明白了。看起来并不是很难。”</p>
+<p>“还有一个有趣的事情告诉你。”</p>
+<p>“你可以用加号 (<code>+</code>) 将字符串连接起来。看看这些例子。”</p>
+<p>|  | 代码 | 说明 |<br>| 1 | <code>String s = &quot;阿米戈&quot; + &quot;是最棒的&quot;;</code> | <code>s</code> 包含<code>&quot;阿米戈是最棒的&quot;</code>。 |<br>| 2 | <code>String s = &quot;&quot;;</code> | <code>s</code> 包含一个空字符串——一个完全没有符号的字符串。 |<br>| 3 | <code>int x = 333; String s = &quot;阿米戈&quot; + x;</code> | <code>s</code> 包含<code>&quot;阿米戈333&quot;</code>。 |</p>
+<p>“那么，你可以为数字添加字符串吗？”</p>
+<p>“可以，但请记住，当你添加字符串和数字时，结果始终是一个字符串。”</p>
+<p>“我通过你的例子理解了。”</p>
+<p>“如果你很聪明的话，想想如何在屏幕上显示一个变量。”</p>
+<p>“嗯。一个变量？在屏幕上？没有任何思路。”</p>
+<p>“实际上，这很简单。要在屏幕上显示某些内容，我们使用 <code>System.out.println()</code> 命令，然后我们将想要打印的内容作为参数来传递。”</p>
+<p>|  | 代码 | 屏幕输出信息 |<br>| 1 | <code>System.out.**println**(&quot;阿米戈&quot;);</code> | 阿米戈 |<br>| 2 | <code>System.out.**println**(&quot;阿米&quot;+&quot;戈&quot;);</code> | 阿米戈 |<br>| 3 | <code>String s = &quot;阿米戈&quot;; System.out.**println**(s);</code> | 阿米戈 |<br>| 4 | <code>String s = &quot;阿米&quot;; System.out.**println**(s+&quot;戈&quot;);</code> | 阿米戈 |</p>
+<p>“啊哈！这让一切都清晰多了。”</p>
+
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2020/09/20/Java%20%E4%BB%8E%E6%89%93%E6%80%AA%E5%8D%87%E7%BA%A7%E5%BC%80%E5%A7%8B%EF%BC%9A%E5%87%86%E5%A4%87%E5%A5%BD%E5%BC%80%E5%A7%8B%E7%AC%AC%E4%B8%80%E4%B8%AA%E7%A8%8B%E5%BA%8F/">
+                Java 从打怪升级开始：准备好开始第一个程序
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+	<div id="vcomments"></div>
+
+
+<script>
+	
+		// 评论
+		new Valine({
+			av: AV,
+			el: '#vcomments',
+			notify: false,
+			verify: false,
+			path: window.location.pathname,
+			appId: '',
+			appKey: '',
+			placeholder: '请输入评论',
+			avatar: 'retro',
+			recordIP: false
+		})
+	
+	
+</script>
+	</div>
+	<div id="footer">
+	<p>
+	©2019-<span id="footerYear"></span> 
+	<a href="/">知识铺</a> 
+	
+	
+		|
+		<span id="busuanzi_container_site_pv">
+			pv
+			<span id="busuanzi_value_site_pv"></span>
+		</span>
+		|
+		<span id="busuanzi_container_site_uv"> 
+			uv
+			<span id="busuanzi_value_site_uv"></span>
+		</span>
+	
+	<br>
+	Theme <a href="//github.com/wujun234/hexo-theme-tree" target="_blank">Tree</a>
+	by <a href="//github.com/wujun234" target="_blank">WuJun</a>
+	Powered by <a href="//hexo.io" target="_blank">Hexo</a>
+	</p>
+</div>
+<script type="text/javascript"> 
+	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
+</script>
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+</html>
