@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		Java String 基础知识点 2020年9月23日 | 
+	 
+	知识铺
+	</title>
+	
+	<!-- keywords,description -->
+	
+		<meta name="keywords" content="知识铺" />
+	 
+		<meta name="description" content="知识铺" />
+	
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+  
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+
+	
+	
+		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+	<header id="header">
+    <a id="title" href="/" class="logo">知识铺</a>
+
+	<ul id="menu">
+		<li class="menu-item">
+			<a href="https://blog.zshipu.com"  target="_blank" class="menu-item-link" >博客</a>
+		</li>
+		<li class="menu-item">
+			<a href="/topSegmentfault"  target="_blank" class="menu-item-link" >Segmentfault</a>
+		</li>
+		<li class="menu-item">
+			<a href="/topopencn"  target="_blank" class="menu-item-link" >开源中国</a>
+		</li>
+		<li class="menu-item">
+			<a href="/topcsdn"  target="_blank" class="menu-item-link" >CSDN</a>
+		</li>
+		<li class="menu-item">
+			<a href="/topjuejin"  target="_blank" class="menu-item-link" >掘金</a>
+		</li>
+		<li class="menu-item">
+			<a href="/toplinuxcn"  target="_blank" class="menu-item-link" >Linux中国</a>
+		</li>
+		<li class="menu-item">
+			<a href="/topgoforum"  target="_blank" class="menu-item-link" >go语言中文网</a>
+		</li>
+		<li class="menu-item">
+			<a href="/about"  target="_blank" class="menu-item-link" >ABOUT</a>
+		</li>
+	</ul>
+</header>
+
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="text" placeholder="search...">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/19/2020%E5%B9%B49%E6%9C%88%E6%9C%9F%E5%88%8A%EF%BC%9A%E7%A7%91%E6%8A%80%E8%A6%81%E9%97%BB/">
+										2020年9月期刊：科技要闻
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/20/CSS%20%E7%83%AD%E7%82%B9%E6%96%87%E7%AB%A0%EF%BC%9A2020%E5%B9%B49%E6%9C%88%E7%AC%AC%E4%B8%89%E5%91%A8/">
+										CSS 热点文章：2020年9月第三周
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/20/CSS%E7%B3%BB%E5%88%97%EF%BC%9ACSS%E6%B8%90%E5%8F%98%E8%89%B2/">
+										CSS系列：CSS渐变色
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/23/Flutter%20%E7%83%AD%E7%82%B9%E6%96%87%E7%AB%A0%202020%E5%B9%B49%E6%9C%8823%E6%97%A5/">
+										Flutter 热点文章 2020年9月23日
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/20/Flutter%20%E7%83%AD%E7%82%B9%E6%96%87%E7%AB%A0%EF%BC%9A2020%E5%B9%B49%E6%9C%88%E7%AC%AC%E4%B8%89%E5%91%A8/">
+										Flutter 热点文章：2020年9月第三周
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/20/Github%20%E7%B3%BB%E5%88%97%EF%BC%9A%E5%9C%A8%20GitHub%20%E4%B8%8A%E8%8E%B7%E5%8F%96%20100%20%E9%A2%97%E6%98%9F%E7%9A%84%208%20%E4%B8%AA%E6%AD%A5%E9%AA%A4/">
+										Github 系列：在 GitHub 上获取 100 颗星的 8 个步骤
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/20/Golang%202020%E5%B9%B49%E6%9C%88%E7%AC%AC%E4%B8%89%E5%91%A8%E7%83%AD%E7%82%B9%E6%96%87%E7%AB%A0/">
+										Golang 2020年9月第三周热点文章
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/20/Golang%20%E7%83%AD%E7%82%B9%E6%8A%80%E6%9C%AF%EF%BC%9A2020-09-20%E6%9C%9F/">
+										Golang 热点技术：2020-09-20期
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/23/Java%20JVM%20%E7%83%AD%E7%82%B9%E6%96%87%E7%AB%A0%202020%E5%B9%B49%E6%9C%8823%E6%97%A5/">
+										Java JVM 热点文章 2020年9月23日
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file active">
+									<a href="/2020/09/23/Java%20String%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9%202020%E5%B9%B49%E6%9C%8823%E6%97%A5/">
+										Java String 基础知识点 2020年9月23日
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/20/Java%20%E4%BB%8E%E6%89%93%E6%80%AA%E5%8D%87%E7%BA%A7%E5%BC%80%E5%A7%8B%EF%BC%9A%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%AD%A6%E4%B9%A0%20Java%20%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B/">
+										Java 从打怪升级开始：从零开始学习 Java 语言编程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/20/Java%20%E4%BB%8E%E6%89%93%E6%80%AA%E5%8D%87%E7%BA%A7%E5%BC%80%E5%A7%8B%EF%BC%9A%E5%87%86%E5%A4%87%E5%A5%BD%E5%BC%80%E5%A7%8B%E7%AC%AC%E4%B8%80%E4%B8%AA%E7%A8%8B%E5%BA%8F/">
+										Java 从打怪升级开始：准备好开始第一个程序
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/20/Java%20%E4%BB%8E%E6%89%93%E6%80%AA%E5%8D%87%E7%BA%A7%E5%BC%80%E5%A7%8B%EF%BC%9A%E8%89%BE%E8%8E%89%E3%80%81%E5%8F%98%E9%87%8F%E5%92%8C%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
+										Java 从打怪升级开始：艾莉、变量和数据类型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/20/Java%20%E4%BB%8E%E6%89%93%E6%80%AA%E5%8D%87%E7%BA%A7%E5%BC%80%E5%A7%8B%EF%BC%9A%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%92%8C%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%91%BD%E4%BB%A4/">
+										Java 从打怪升级开始：虚拟机和第一个命令
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/20/Java%20%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%EF%BC%9A%E6%83%B3%E8%A6%81%E5%BF%AB%E9%80%9F%E5%AD%A6%E4%B9%A0%20Java%EF%BC%9F%E7%83%A7%E6%8E%89%E6%89%80%E6%9C%89%20Java%20%E6%95%99%E7%A8%8B%E4%B9%A6%E7%B1%8D%20%E5%89%8D%E8%A8%80/">
+										Java 从零开始：想要快速学习 Java？烧掉所有 Java 教程书籍 前言
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/23/Java%20%E5%AF%B9%E8%B1%A1%20%E7%83%AD%E7%82%B9%E6%96%87%E7%AB%A0%202020%E5%B9%B49%E6%9C%8823%E6%97%A5/">
+										Java 对象 热点文章 2020年9月23日
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/20/Java%20%E6%84%9F%E6%83%B3%EF%BC%9A%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E5%96%9C%E6%AC%A2Java/">
+										Java 感想：为什么我喜欢Java
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/20/Java%20%E7%83%AD%E7%82%B9%E6%96%87%E7%AB%A0%202020%E5%B9%B49%E6%9C%88%E7%AC%AC%E4%B8%89%E5%91%A8/">
+										Java 热点文章 2020年9月第三周
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/23/Java%20%E7%BA%BF%E7%A8%8B%20%E7%83%AD%E7%82%B9%E6%96%87%E7%AB%A0%202020%E5%B9%B49%E6%9C%8823%E6%97%A5/">
+										Java 线程 热点文章 2020年9月23日
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/23/Java%20%E9%9D%A2%E8%AF%95%20%E7%83%AD%E7%82%B9%E6%96%87%E7%AB%A0%202020%E5%B9%B49%E6%9C%8823%E6%97%A5/">
+										Java 面试 热点文章 2020年9月23日
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/23/MyBatis%20%E7%83%AD%E7%82%B9%E6%96%87%E7%AB%A0%202020%E5%B9%B49%E6%9C%8823%E6%97%A5/">
+										MyBatis 热点文章 2020年9月23日
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/20/Mybatis%20%E7%83%AD%E7%82%B9%E6%96%87%E7%AB%A0%EF%BC%9A2020%E5%B9%B49%E6%9C%88%E7%AC%AC%E4%B8%89%E5%91%A8/">
+										Mybatis 热点文章：2020年9月第三周
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/23/Nacos%20%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0%202020%E5%B9%B49%E6%9C%8823%E6%97%A5/">
+										Nacos 热门文章 2020年9月23日
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/20/Node.js%20%E7%83%AD%E7%82%B9%E6%96%87%E7%AB%A0%EF%BC%9A2020%E5%B9%B49%E6%9C%88%E7%AC%AC%E4%B8%89%E5%91%A8/">
+										Node.js 热点文章：2020年9月第三周
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/23/Spring%20Boot%20%E7%83%AD%E7%82%B9%E6%96%87%E7%AB%A0%202020%E5%B9%B49%E6%9C%8823%E6%97%A5/">
+										Spring Boot 热点文章 2020年9月23日
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/20/Spring%20%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0%EF%BC%9A2020%E5%B9%B49%E6%9C%88%E7%AC%AC%E4%B8%89%E5%91%A8/">
+										Spring 热门文章：2020年9月第三周
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/20/Web%E6%8A%80%E6%9C%AF%EF%BC%9A%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E5%85%B7%E6%9E%84%E5%BB%BA%20300%20%E5%A4%9A%E4%B8%AA%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/">
+										Web技术：如何使用自动化工具构建 300 多个开源项目
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/19/hexo%20%E9%BB%91%E7%A7%91%E6%8A%80%EF%BC%9Ago%E8%B0%83%E7%94%A8%E5%91%BD%E4%BB%A4%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90/">
+										hexo 黑科技：go调用命令自动生成
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content">
+		<h1 id="article-title">
+
+	Java String 基础知识点 2020年9月23日
+</h1>
+<div class="article-meta">
+	
+	<span>知识铺</span>
+	<span>2020-09-23 21:56:07</span>
+    
+		<div id="article-categories">
+            
+		</div>
+    
+</div>
+
+<div id="article-content">
+	<h3 id="java-中-String-的可变参数-u014344668的专栏-CSDN博客"><a href="#java-中-String-的可变参数-u014344668的专栏-CSDN博客" class="headerlink" title="_java_中_String_的可变参数_u014344668的专栏-CSDN博客"></a><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://blog.csdn.net/u014344668/article/details/108747375">_java_中_String_的可变参数_u014344668的专栏-CSDN博客</a></h3><p> 11小时前 _java_中_String_的可变参数基本介绍可变参数特点源码引用场景应用加和处理参数校验学习_Java_的同学注意了!!!学习过程中遇到什么问题或者想获取学习资源的…</p>
+<h3 id="java-高级架构师教程-Java-JDK-11中的String-图灵学…"><a href="#java-高级架构师教程-Java-JDK-11中的String-图灵学…" class="headerlink" title="java_高级架构师教程-_Java JDK 11中的String - 图灵学…"></a><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://www.cnblogs.com/tulingxueyuan/p/13720776.html"><em>java_高级架构师教程-_Java</em> JDK 11中的<em>String</em> - 图灵学…</a></h3><p> 1小时前 图灵学院 <em>java_高级架构师教程 通过OpenJDK JDK 11 Early Access Build 20版本在本文中讲解JDK 11 _String_的六个方法: _String</em>.repeat(int) <em>String</em>.lines() <em>String</em>…</p>
+<h3 id="Java-基础与实践-144-String-类-二-刘安战的在线视频教程"><a href="#Java-基础与实践-144-String-类-二-刘安战的在线视频教程" class="headerlink" title="_Java_基础与实践-144-_String_类(二)-刘安战的在线视频教程"></a><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://edu.csdn.net/course/play/9004/379291">_Java_基础与实践-144-_String_类(二)-刘安战的在线视频教程</a></h3><p> 9小时前 本课程是一套全面讲解_Java_语言程序设计的开发类课程,由浅入深地介绍_Java_基础内容,主要包括基本类型及运算符、控制执行流程、_字符串_、面向对象、集合与…</p>
+<h3 id="Java-中基本类型和-字符串-之间的转换-木卫-CSDN博客"><a href="#Java-中基本类型和-字符串-之间的转换-木卫-CSDN博客" class="headerlink" title="Java 中基本类型和_字符串_之间的转换_木卫-CSDN博客"></a><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://blog.csdn.net/qq_39247931/article/details/108743455"><em>Java</em> 中基本类型和_字符串_之间的转换_木卫-CSDN博客</a></h3><p> 22小时前 <em>java_中基本数据类型与_字符串_类型之间相互转换 wang1253的博客 06-20 1901 基本数据类型转换为_字符串_类型:1、将基本数据类型与空_字符串</em>(“”)连接(+)即…</p>
+<h3 id="java-之-String字符串-前后补0操作方法-蔡香满屋-博…"><a href="#java-之-String字符串-前后补0操作方法-蔡香满屋-博…" class="headerlink" title="_java_之_String字符串_前后补0操作方法 - 蔡香满屋 - 博…"></a><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://www.cnblogs.com/caiguangbi-53/p/13716394.html">_java_之_String字符串_前后补0操作方法 - 蔡香满屋 - 博…</a></h3><p> 12小时前 <em>String</em> myStr = “0000000000000000”; System.out.println(compCode + myStr.substring(0, myStr.length() - compCode.length()));}效果如图所示:分类: _Java_好…</p>
+<h3 id="java-byte-转化十六进制的字符串-草木物语-博客园"><a href="#java-byte-转化十六进制的字符串-草木物语-博客园" class="headerlink" title="java byte[] 转化十六进制的字符串 - 草木物语 - 博客园"></a><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://www.cnblogs.com/ooo0/p/13717732.html"><em>java</em> byte[] 转化十六进制的<em>字符串</em> - 草木物语 - 博客园</a></h3><p> 8小时前 <em>java</em> byte[] 转化十六进制的<em>字符串</em> // byte[] 转化十六进制的<em>字符串</em> private static <em>String</em> bytesToHex(final byte[] hash) { Formatter formatter = …</p>
+<h3 id="JAVA字符串-如何转换成数字-StringToNumber-一蓑烟雨…"><a href="#JAVA字符串-如何转换成数字-StringToNumber-一蓑烟雨…" class="headerlink" title="_JAVA字符串_如何转换成数字(StringToNumber)_一蓑烟雨…"></a><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://blog.csdn.net/QGhurt/article/details/108762569">_JAVA字符串_如何转换成数字(StringToNumber)_一蓑烟雨…</a></h3><p> 9分钟前 public static void main(<em>String</em>[] args) { <em>String</em> str = “123”; Integer num1 = new Integer(str); int num2 = Integer.parseInt(str); Integer num3…</p>
+<h3 id="Java-String-Buffer类-Dengxxxx的博客-CSDN博客"><a href="#Java-String-Buffer类-Dengxxxx的博客-CSDN博客" class="headerlink" title="Java-_String_Buffer类_Dengxxxx的博客-CSDN博客"></a><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://blog.csdn.net/Dengxxxx/article/details/108742112"><em>Java</em>-_String_Buffer类_Dengxxxx的博客-CSDN博客</a></h3><p> 23小时前 1、_String_Buffer是一个容器——字符缓冲区。 容器:即知识一个存放东西的功能,无论存放什么东西,都不会改变它的实质,对其的一系列增删改查操作,都是针…</p>
+<h3 id="大神带你走进-Java-世界-22-String-类底层分析-JDK源码分…"><a href="#大神带你走进-Java-世界-22-String-类底层分析-JDK源码分…" class="headerlink" title="大神带你走进_Java_世界-22-_String_类底层分析_JDK源码分…"></a><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://edu.csdn.net/course/play/25187/306927">大神带你走进_Java_世界-22-_String_类底层分析_JDK源码分…</a></h3><p> 14小时前 tringBuilder__String_Buffer的使用_JDK源码分析 不可变字符序列和可变字符序列的深入 <em>java</em>.util.Date类 DateFormat和SimpleDateFormat类 Calendar…</p>
+<h3 id="零基础学Java-编程—-Java-从小白到大咖-120-比较-字符串…"><a href="#零基础学Java-编程—-Java-从小白到大咖-120-比较-字符串…" class="headerlink" title="零基础学Java_编程—_Java_从小白到大咖-120-比较_字符串…"></a><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://edu.csdn.net/course/play/25100/296032">零基础学<em>Java_编程—_Java_从小白到大咖-120-比较_字符串</em>…</a></h3><p> 17小时前 学会_Java_基础知识,开发一个实战项目,,… 第一百二十节 比较_字符串_是否相等 视频时长: 11:21 本节知识点: 比较_字符串_是否相等 免费试学0 7 分享 微…</p>
+<h3 id="List转Map-lt-String-Object-gt-利用-Java-8新特性-Fi…"><a href="#List转Map-lt-String-Object-gt-利用-Java-8新特性-Fi…" class="headerlink" title="List转Map&lt;_String_,Object&gt;利用_Java_8新特性_Fi…"></a><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://blog.csdn.net/FiveStarsGeneral/article/details/108759477">List<Object>转Map&lt;_String_,Object&gt;利用_Java_8新特性_Fi…</a></h3><p> 2小时前 问题项目中需要将查询到的List对象转换为Map&lt;_String_,FlightCity&gt;,暴力的方法就是for循环,但是这样太费时费力,而且容易出错。因此可以用到_java_8…</p>
+<h3 id="String-在编译时的优化及switch中对-String-的支持-java-…"><a href="#String-在编译时的优化及switch中对-String-的支持-java-…" class="headerlink" title="String_在编译时的优化及switch中对_String_的支持__java_…"></a><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://blog.csdn.net/java_t_t/article/details/108758441"><em>String_在编译时的优化及switch中对_String_的支持__java_</em>…</a></h3><p> 3小时前 前提:jdk版本为1.8.0_73_java_代码:public class test { public static void main(<em>String</em>[] args) throws Exception { <em>String</em> str = “a” + “b”; for (in…</p>
+<h3 id="…id‘-not-found-on-type-java-lang-String-问题解决…"><a href="#…id‘-not-found-on-type-java-lang-String-问题解决…" class="headerlink" title="…id‘ not found on type java.lang._String_问题解决…"></a><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://blog.csdn.net/p15097962069/article/details/108750427">…id‘ not found on type <em>java</em>.lang._String_问题解决…</a></h3><p> 9小时前 Property ‘id’ not found on type <em>java</em>.lang.<em>String_问题解决 参考文章: (1)Property ‘id’ not found on type _java</em>.lang._String_问题解决 (2)<a target="_blank" rel="noopener" href="https://ww/">https://ww</a>…</p>
+<h3 id="【LeetCode】剑指-Offer-58-II-左旋转字符串-Java…"><a href="#【LeetCode】剑指-Offer-58-II-左旋转字符串-Java…" class="headerlink" title="【LeetCode】剑指 Offer 58 - II. 左旋转字符串(Java…"></a><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://blog.csdn.net/qq_36903261/article/details/108746035">【LeetCode】剑指 Offer 58 - II. 左旋转<em>字符串</em>(<em>Java</em>…</a></h3><p> 12小时前 <em>字符串_的左旋转操作是把_字符串_前面的若干个字符转移到_字符串_的尾部。请定义一个函数实现_字符串_左旋转操作的功能。比如,输入_字符串</em>“abcdefg”和数字2,该…</p>
+<h3 id="【夏弈的学习笔记】-Java-浮点精度损失-夏弈-博客园"><a href="#【夏弈的学习笔记】-Java-浮点精度损失-夏弈-博客园" class="headerlink" title="【夏弈的学习笔记】(Java)浮点精度损失 - 夏弈 - 博客园"></a><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://www.cnblogs.com/BlackString/p/13716877.html">【夏弈的学习笔记】(<em>Java</em>)浮点精度损失 - 夏弈 - 博客园</a></h3><p> 11小时前 夏弈 沿着河边的白沙滩行走,希望能找到桃花源。 随笔- 41 文章- 0 评论- 3 博客园 首页 新随笔 联系 管理 订阅 【夏弈的学习笔记】(<em>Java</em>)浮点精度损失 …</p>
+<h3 id="hive-‘-‘-字符串-显示与中文别名-Java-BigData的博客-C…"><a href="#hive-‘-‘-字符串-显示与中文别名-Java-BigData的博客-C…" class="headerlink" title="hive ‘#‘_字符串_显示与中文别名__Java_BigData的博客-C…"></a><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://blog.csdn.net/JavaBigData/article/details/108760860">hive ‘#‘_字符串_显示与中文别名__Java_BigData的博客-C…</a></h3><p> 1小时前 select ‘a’ as <code>中文字段</code> –<strong>中文别名需要用反单引号</strong>,在ESC键下面 ,’b’ as bb , 1 as num ; 1 2 3 4 hive ‘#’_字符串_显示点…</p>
+<h3 id="java-中如何将数字转换成-字符串-int转换为string-一蓑…"><a href="#java-中如何将数字转换成-字符串-int转换为string-一蓑…" class="headerlink" title="java_中如何将数字转换成_字符串(int转换为string)_一蓑…"></a><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://blog.csdn.net/QGhurt/article/details/108742938"><em>java_中如何将数字转换成_字符串</em>(int转换为<em>string</em>)_一蓑…</a></h3><p> 23小时前 各种数字类型转换成<em>字符串_型–_JAVA</em> 天大地大 10-07 1341 各种数字类型转换成<em>字符串_型: _String s</em> = <em>String</em>.valueOf( value); // 其中 value 为任意一…</p>
+<h3 id="java-笔记-String-转int-double-int-转-string-yogur-f…"><a href="#java-笔记-String-转int-double-int-转-string-yogur-f…" class="headerlink" title="_java_笔记 _String_转int, double int 转 _string__yogur_f…"></a><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://blog.csdn.net/yogur_father/article/details/108761288">_java_笔记 _String_转int, double int 转 _string__yogur_f…</a></h3><p> 1小时前 一.<em>String_转 int, double(1)_String</em> -&gt; intint a = Integer.valueOf(“123”);(2) <em>String</em> -&gt; doubledouble a = Double.valueOf(“3.14”);二.int…</p>
+<h3 id="java-8实现数组转-字符串-以特定字符拼接-Lonely-Devil…"><a href="#java-8实现数组转-字符串-以特定字符拼接-Lonely-Devil…" class="headerlink" title="java_8实现数组转_字符串(以特定字符拼接)_Lonely_Devil…"></a><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://blog.csdn.net/Lonely_Devil/article/details/108749811"><em>java_8实现数组转_字符串</em>(以特定字符拼接)_Lonely_Devil…</a></h3><p> 10小时前 <em>java_8实现数组转_字符串</em>(以特定字符拼接)的方法 实现代码 list.stream().collect(Collectors.joining(“,”)); 实例 List list = new ArrayList(); list…</p>
+<h3 id="【-Java-】计算一个-字符串-中每个字符出现次数-ZD-012的…"><a href="#【-Java-】计算一个-字符串-中每个字符出现次数-ZD-012的…" class="headerlink" title="【_Java_】计算一个_字符串_中每个字符出现次数_ZD_012的…"></a><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://blog.csdn.net/ZD_012/article/details/108759698">【_Java_】计算一个_字符串_中每个字符出现次数_ZD_012的…</a></h3><p> 2小时前 遍历<em>字符串</em>,获取每一个字符 使用获取到的字符,在Map集合中判断key是否存在 遍历Map集合,输出结果 代码 import <em>java</em>.util.HashMap; import <em>java</em>.util.S…</p>
+<h3 id="…cannot-be-cast-to-java-lang-String-hangge的学习…"><a href="#…cannot-be-cast-to-java-lang-String-hangge的学习…" class="headerlink" title="…cannot be cast to java.lang._String__hangge的学习…"></a><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://blog.csdn.net/chenhangx/article/details/108748453">…cannot be cast to <em>java</em>.lang._String__hangge的学习…</a></h3><p> 10小时前 com.alibaba.fastjson.JSONObject cannot be cast to <em>java</em>.lang.<em>String</em> <em>String</em> data=(<em>String</em>) parseObject.get(“data”); 1 JSON_字符串_转Map,获取叶子…</p>
+<h3 id="Java-对象锁ReentrantLock、synchronized锁-字符串-FeeL…"><a href="#Java-对象锁ReentrantLock、synchronized锁-字符串-FeeL…" class="headerlink" title="_Java_对象锁ReentrantLock、synchronized锁_字符串__FeeL…"></a><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://blog.csdn.net/qq_32182637/article/details/108760581">_Java_对象锁ReentrantLock、synchronized锁_字符串__FeeL…</a></h3><p> 1小时前 import <em>java</em>.util.concurrent.locks.ReentrantLock;public class Main{ public static void main(<em>String</em>[] args) { //锁池 ReentrantLock[] locks= ne…</p>
+
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2020/09/23/Java%20%E9%9D%A2%E8%AF%95%20%E7%83%AD%E7%82%B9%E6%96%87%E7%AB%A0%202020%E5%B9%B49%E6%9C%8823%E6%97%A5/">
+                Java 面试 热点文章 2020年9月23日
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+	<div id="vcomments"></div>
+
+
+<script>
+	
+		// 评论
+		new Valine({
+			av: AV,
+			el: '#vcomments',
+			notify: false,
+			verify: false,
+			path: window.location.pathname,
+			appId: '',
+			appKey: '',
+			placeholder: '请输入评论',
+			avatar: 'retro',
+			recordIP: false
+		})
+	
+	
+</script>
+	</div>
+	<div id="footer">
+	<p>
+	©2019-<span id="footerYear"></span> 
+	<a href="/">知识铺</a> 
+	
+	
+		|
+		<span id="busuanzi_container_site_pv">
+			pv
+			<span id="busuanzi_value_site_pv"></span>
+		</span>
+		|
+		<span id="busuanzi_container_site_uv"> 
+			uv
+			<span id="busuanzi_value_site_uv"></span>
+		</span>
+	
+	<br>
+	Theme <a href="//github.com/wujun234/hexo-theme-tree" target="_blank">Tree</a>
+	by <a href="//github.com/wujun234" target="_blank">WuJun</a>
+	Powered by <a href="//hexo.io" target="_blank">Hexo</a>
+	</p>
+</div>
+<script type="text/javascript"> 
+	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
+</script>
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+</html>
