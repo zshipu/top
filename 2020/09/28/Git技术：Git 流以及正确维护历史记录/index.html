@@ -9,7 +9,7 @@
 	
 	<title>
 	
-		Github 系列：在 GitHub 上获取 100 颗星的 8 个步骤 | 
+		Git技术：Git 流以及正确维护历史记录 | 
 	 
 	知识铺
 	</title>
@@ -150,7 +150,7 @@
 							</ul>
 			
 							<ul>
-								<li class="file active">
+								<li class="file">
 									<a href="/2020/09/20/Github%20%E7%B3%BB%E5%88%97%EF%BC%9A%E5%9C%A8%20GitHub%20%E4%B8%8A%E8%8E%B7%E5%8F%96%20100%20%E9%A2%97%E6%98%9F%E7%9A%84%208%20%E4%B8%AA%E6%AD%A5%E9%AA%A4/">
 										Github 系列：在 GitHub 上获取 100 颗星的 8 个步骤
 									</a>
@@ -159,7 +159,7 @@
 							</ul>
 			
 							<ul>
-								<li class="file">
+								<li class="file active">
 									<a href="/2020/09/28/Git%E6%8A%80%E6%9C%AF%EF%BC%9AGit%20%E6%B5%81%E4%BB%A5%E5%8F%8A%E6%AD%A3%E7%A1%AE%E7%BB%B4%E6%8A%A4%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95/">
 										Git技术：Git 流以及正确维护历史记录
 									</a>
@@ -481,12 +481,12 @@
 	<div id="content">
 		<h1 id="article-title">
 
-	Github 系列：在 GitHub 上获取 100 颗星的 8 个步骤
+	Git技术：Git 流以及正确维护历史记录
 </h1>
 <div class="article-meta">
 	
 	<span>知识铺</span>
-	<span>2020-09-20 18:55:52</span>
+	<span>2020-09-28 21:39:40</span>
     
 		<div id="article-categories">
             
@@ -495,19 +495,35 @@
 </div>
 
 <div id="article-content">
-	<p> 以下是最近<a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://github.com/nastyox/Rando.js">GitHub 存储库的查看器分析</a>的屏幕截图，该存储库刚刚开始启动：</p>
-<p><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://res.cloudinary.com/practicaldev/image/fetch/s--nPCJE9pI--/c_limit,f_auto,fl_progressive,q_auto,w_880/https://dev-to-uploads.s3.amazonaws.com/i/p9t3qhrpf68acq5k255p.png"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--nPCJE9pI--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/p9t3qhrpf68acq5k255p.png" alt="GitHub viewer analytics"></a></p>
-<p>从这张图表中可以清楚地看出，我花了一点时间试图以平坦的方式获得星星，在找到方法之前，这种方式不起作用。我来这里是想帮你解决这些废话，把注意力集中在工作的方法上。</p>
-<h1 id="1-创建一个漂亮的顶部部分的-READ-ME"><a href="#1-创建一个漂亮的顶部部分的-READ-ME" class="headerlink" title="1. 创建一个漂亮的顶部部分的 READ-ME"></a><a href="#1-create-a-readme-with-a-pretty-top-section"></a>1. 创建一个漂亮的顶部部分的 READ-ME</h1><p>您的 READ-ME 文件就像您的存储库的主页。很大一部分人会仅仅因为项目看起来不错就成为明星，而且并非所有用户都会向下滚动过您的 READ-ME 的顶部，因此请尽可能让顶部变得漂亮。下面将<a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://help.github.com/en/enterprise/2.14/user/articles/initializing-an-empty-repository-with-a-readme">创建一个 READ-ME</a>，下面是一<a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://jbt.github.io/markdown-editor/">个根据需要练习标记</a>的地方。成功的秘诀是设计良好的徽标，下方有标语，后跟盾牌<a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://shields.io/category/rating">，</a>然后是五颜六色的飞溅图像。以下是我所做的我的回购;它是动画的，所以<a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://github.com/nastyox/Rando.js">你可以点击这里，如果你想看到它现场</a>：</p>
-<p><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://res.cloudinary.com/practicaldev/image/fetch/s--kaVtVZXR--/c_limit,f_auto,fl_progressive,q_auto,w_880/https://dev-to-uploads.s3.amazonaws.com/i/mk6vni95iwmhf8k8dr3r.png"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--kaVtVZXR--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/mk6vni95iwmhf8k8dr3r.png" alt="Rando.js READ-ME"></a></p>
-<h1 id="2-简明扼要"><a href="#2-简明扼要" class="headerlink" title="2. 简明扼要"></a><a href="#2-be-concise"></a>2. 简明扼要</h1><p>人们的注意力非常短。切掉所有多余的措辞， 你的 Read - me， 并进入黄铜钉。如果可能，请向用户展示如何使用快速 gif 中的项目。下面以及如何在 Mac 和 PC<a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://support.apple.com/en-us/HT208721#:~:text=Use+Shift%2DCommand%2D5,screen+with+QuickTime+Player+instead.">上录制</a><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://www.youtube.com/watch?v=TOxzIeIUKjY">屏幕</a>。这里是我找到<a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://ezgif.com/video-to-gif">的最好的在线视频 gif</a>转换器。</p>
-<h1 id="3-选择开放许可证"><a href="#3-选择开放许可证" class="headerlink" title="3. 选择开放许可证"></a><a href="#3-choose-an-open-license"></a>3. 选择开放许可证</h1><p>人们不喜欢你卖给他们的东西。如果可能<a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://help.github.com/en/github/building-a-strong-community/adding-a-license-to-a-repository">，请为</a>存储库创建许可证，以免费打开该许可证。我选择了”<a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://github.com/nastyox/Rando.js/blob/master/LICENSE">许可证”。</a>这将在你的 READ-ME 旁边，人们会看到它。</p>
-<h1 id="4-有星星"><a href="#4-有星星" class="headerlink" title="4. 有星星"></a><a href="#4-have-stars"></a>4. 有星星</h1><p>这很奇怪， 但如果人们看到其他人已经这样做了， 他们更愿意关注你的项目。请你的朋友star你的项目，让雪球滚动起来。不要创建假 GitHub 帐户来star自己的项目，GitHub 很容易封号。</p>
-<h1 id="5-上传醒目的社交卡"><a href="#5-上传醒目的社交卡" class="headerlink" title="5. 上传醒目的社交卡"></a><a href="#5-upload-an-eyecatching-social-card"></a>5. 上传醒目的社交卡</h1><p>当人们共享指向您的 GitHub 存储库的链接时，它将附带您为社交卡选择的任何图像。使其色彩鲜艳，足以弹出屏幕和挑衅足以值得一点击。下面是如何<a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://help.github.com/en/github/administering-a-repository/customizing-your-repositorys-social-media-preview">上传一个</a>。</p>
-<p><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://res.cloudinary.com/practicaldev/image/fetch/s--KQuq0r9d--/c_limit,f_auto,fl_progressive,q_auto,w_880/https://dev-to-uploads.s3.amazonaws.com/i/ral38dyvzvlvp7ke166x.png"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--KQuq0r9d--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/ral38dyvzvlvp7ke166x.png" alt="Rando.js GitHub social card"></a></p>
-<h1 id="6-广告"><a href="#6-广告" class="headerlink" title="6. 广告"></a><a href="#6-advertise"></a>6. 广告</h1><p>有很多平台可以免费发布您的项目。那些最适合我的JavaScript基于存储库（按顺序）是<a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://www.reddit.com/r/javascript/">r/javascript</a><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://www.reddit.com/r/webdev/">和r/webdev在Reddit，Cooperpress</a>运行最大的<a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://cooperpress.com/publications/">编码电子邮件</a>通讯（<a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://cooperpress.com/contact/">联系人</a>在这里），Dev.to，<a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://news.hada.io/">哈达新闻</a>，<a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://www.echojs.com/">回声JS，</a><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://news.ycombinator.com/">黑客新闻</a>，<a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://www.producthunt.com/">产品狩猎</a>，<a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://www.facebook.com/">推特，Facebook</a>和<a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://www.linkedin.com/feed/">LinkedIn。</a> <a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://lobste.rs/">龙虾</a>是一个只邀请的社区， 我还没有一个， 但你可以张贴在那里， 如果你这样做。如果您的存储库像我一样基于 JavaScript，也可以在达到<a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://www.javascripting.com/">80 颗星</a>后发布到 JavaScript。即使通过贡献/星星/关注<a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://github.com/">与其他用户在 GitHub</a>上的存储库进行交互，也可能导致访问您自己的存储库。不过， 不要过度使用 Github 交互;您将被标记或禁止或垃圾邮件。</p>
-<h1 id="7-参与开发者社区"><a href="#7-参与开发者社区" class="headerlink" title="7. 参与开发者社区"></a><a href="#7-engage-in-developer-communities"></a>7. 参与开发者社区</h1><p>一旦你在这些社区做广告，就和它们的人联系。他们不会找到你， 除非你给他们一个理由， 关心你的存在。查找您喜欢Dev.to文章，并真正喜欢它们/留下评论。在 GitHub 上进行明星项目，并为其他项目做出贡献。喜欢和转推推特上的人。</p>
-<h1 id="8-及时响应反馈"><a href="#8-及时响应反馈" class="headerlink" title="8. 及时响应反馈"></a><a href="#8-respond-to-feedback"></a>8. 及时响应反馈</h1><p>人们会回复你关于这些社区的帖子，并给出建议。告诉他们你已经听到了，并实际改变你的项目，以适应公众想要的。他们明确告诉你如何让这个项目值得主演， 所以听。</p>
+	<p> 如何使用git和选择每个项目的最佳方法。</p>
+<p><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://res.cloudinary.com/practicaldev/image/fetch/s--gsdWZ81J--/c_limit,f_auto,fl_progressive,q_auto,w_880/https://dev-to-uploads.s3.amazonaws.com/i/6l8p92eh4fs48rpkhdlr.jpg"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--gsdWZ81J--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/6l8p92eh4fs48rpkhdlr.jpg" alt="Alt Text"></a></p>
+<p>维护历史记录时，请尝试遵循以下两条规则：</p>
+<ol>
+<li><p>主分支应仅包含逻辑完成的提交，例如，任务 A 已完成或 Bug B 已修复。</p>
+</li>
+<li><p>历史不应是分支的，并且与许多合并提交混淆。换句话说，最好使用重基而不是合并。</p>
+</li>
+</ol>
+<p>离散窗体的历史记录（在逻辑上完成每个提交时）允许您更快地工作并在将来解决问题。例如，您需要在一段时间后执行与任务”A”相同的任务，或者发现添加此任务后，一些工作方式不正确。您可以轻松地在一次提交中查看所有更改的文件，或签出到此提交以测试此逻辑是否不再在项目中，或者是否已更改。此外，在 git 中，还有一种模式可帮助您使用 git 二分项搜索 Bug。它帮助开发人员在出现 Bug 的给定范围内查找提交。如果您有很多中间提交，或者更糟的是，如果您的提交包含未编译的代码，则很难使用，并且开发过程将至少慢 20%。</p>
+<p>重基而不是合并更好，让我来说明一下。例如，我在开发分支工作一段时间，我完成了 3 个任务（f1、f2、f3），我的同事 Alex 也完成了 3 次任务（c1、c2、c3）。</p>
+<p><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://res.cloudinary.com/practicaldev/image/fetch/s--Cmu4SFhj--/c_limit,f_auto,fl_progressive,q_auto,w_880/https://dev-to-uploads.s3.amazonaws.com/i/smb8ou7tr8uv2tp1hl6g.png"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--Cmu4SFhj--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/smb8ou7tr8uv2tp1hl6g.png" alt="Alt Text"></a></p>
+<p>然后，有必要将我们所有的更改放在一起，我们决定使用合并。如果我们将我的分支合并到开发人员中，然后使用 Alex 的分支进行，那么我们得到的就是：</p>
+<p><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://res.cloudinary.com/practicaldev/image/fetch/s--tb7u5hgB--/c_limit,f_auto,fl_progressive,q_auto,w_880/https://dev-to-uploads.s3.amazonaws.com/i/vzcqpq4odylgw2ofdvzf.png"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--tb7u5hgB--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/vzcqpq4odylgw2ofdvzf.png" alt="Alt Text"></a></p>
+<p>以上是只有两个开发人员提交的结果，因此很难想象当 3-4 个人在项目上工作，并且每个开发人员在每个分支中执行多个提交时会发生什么。显然，在这种情况下，你的历史将更混乱。</p>
+<p>如果使用 rebase 并一个个地将所有分支加起来，则获得以下结果：</p>
+<p><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://res.cloudinary.com/practicaldev/image/fetch/s--EY8_8jKn--/c_limit,f_auto,fl_progressive,q_auto,w_880/https://dev-to-uploads.s3.amazonaws.com/i/9apy4fo2fx9oq9fomapi.png"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--EY8_8jKn--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/9apy4fo2fx9oq9fomapi.png" alt="Alt Text"></a></p>
+<p>但是，只有仅对只有 1-2 个提交进行重新基础的分支，或者如果您知道与开发中已有的代码没有很多冲突，则这才方便。由于 rebase 应用了一个又一个提交，因此存在以下情况：您可以解决第一个提交之一的冲突，然后在以下提交中，您与使用的同一文件发生冲突，因此，您自行解决代码的冲突非常不方便且非常耗时。您可能认为在这种情况下，最好使用合并。这个问题是有争议的，取决于您的分支中存在什么样的提交。如果他们是大，你工作他们每个人约一个星期，那么是的，但如果他们都涉及到一些任务，那么最好是通过从这个分支进行一个提交，然后重新基地这个提交到开发。</p>
+<p>问题是，什么是最好的选择，修改或重置您的提交，然后上传任务到开发与1-2提交，或作出大量的提交，然后挤压。</p>
+<p><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://res.cloudinary.com/practicaldev/image/fetch/s--_MDBtQ6i--/c_limit,f_auto,fl_progressive,q_auto,w_880/https://dev-to-uploads.s3.amazonaws.com/i/fokzbq0qif005tg6gbpj.jpg"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--_MDBtQ6i--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/fokzbq0qif005tg6gbpj.jpg" alt="Alt Text"></a></p>
+<p>这取决于您的选择和项目的要求。事实是，您的团队领导或客户可以要求每日提交，即使代码不稳定，以便监视您的进度。在这种情况下，你别无选择，只能做壁球。</p>
+<p>为了说明，我将创建一个分支 f4，并在它中进行 4 个每日提交，从我们开始的位置创建一个临时分支 f4_temp，它将为我替换远程源/f4，如果我使用远程存储库，我会创建它。</p>
+<p><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://res.cloudinary.com/practicaldev/image/fetch/s--zPiSTQoy--/c_limit,f_auto,fl_progressive,q_auto,w_880/https://dev-to-uploads.s3.amazonaws.com/i/fohcw4pf532ms5frg8ju.png"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--zPiSTQoy--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/fohcw4pf532ms5frg8ju.png" alt="Alt Text"></a></p>
+<p>然后压缩提交和重新基点。</p>
+<p><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://res.cloudinary.com/practicaldev/image/fetch/s--RdkxhRez--/c_limit,f_auto,fl_progressive,q_auto,w_880/https://dev-to-uploads.s3.amazonaws.com/i/08h23hw21kmzw0naxdas.png"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--RdkxhRez--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/08h23hw21kmzw0naxdas.png" alt="Alt Text"></a></p>
+<p>现在，f4 分支具有与 f4_temp 相同的更改，如果转到提交设置，则可以看到注释也已保存。<br>但是，如果要将任务拆分为多个提交，会怎么样？例如，如果您已创建与任务相关的内部逻辑，则您希望它位于单独的提交中，但尚未完成上载到开发人员，因为还需要完成 UI。例如，f4 分支是内部逻辑，正如您所看到的，我还没有将其上载到开发人员中，我们根据相同的原则重复所有内容，创建 f4_ui 分支，并进行 3 次提交。</p>
+<p><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://res.cloudinary.com/practicaldev/image/fetch/s--dOVbtdQM--/c_limit,f_auto,fl_progressive,q_auto,w_880/https://dev-to-uploads.s3.amazonaws.com/i/brud0h2w5kzua9ax4tqn.png"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--dOVbtdQM--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/brud0h2w5kzua9ax4tqn.png" alt="Alt Text"></a></p>
+<p>现在，我们挤压，上传到开发，并保留f4_ui_temp（源）分支的团队领导，它始终可以删除以后。</p>
+<p><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://res.cloudinary.com/practicaldev/image/fetch/s--7LvAK0G---/c_limit,f_auto,fl_progressive,q_auto,w_880/https://dev-to-uploads.s3.amazonaws.com/i/2zqjtha1yyc3yuyq972h.png"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--7LvAK0G---/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/2zqjtha1yyc3yuyq972h.png" alt="Alt Text"></a></p>
 
 </div>
 
@@ -515,16 +531,11 @@
     <div class="post-guide">
         <div class="item left">
             
-              <a href="/2020/09/20/CSS%E7%B3%BB%E5%88%97%EF%BC%9ACSS%E6%B8%90%E5%8F%98%E8%89%B2/">
-                  <i class="fa fa-angle-left" aria-hidden="true"></i>
-                  CSS系列：CSS渐变色
-              </a>
-            
         </div>
         <div class="item right">
             
-              <a href="/2020/09/20/Golang%202020%E5%B9%B49%E6%9C%88%E7%AC%AC%E4%B8%89%E5%91%A8%E7%83%AD%E7%82%B9%E6%96%87%E7%AB%A0/">
-                Golang 2020年9月第三周热点文章
+              <a href="/2020/09/28/%E5%8D%81%E5%A4%A7%E5%BC%80%E5%8F%91%E8%80%85%E8%B6%8B%E5%8A%BF%EF%BC%8C%E5%91%A8%E6%97%A5%209%20%E6%9C%88%2027%20%E6%97%A5%202020/">
+                十大开发者趋势，周日 9 月 27 日 2020
                 <i class="fa fa-angle-right" aria-hidden="true"></i>
               </a>
             
