@@ -6,17 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://top.zshipu.com">
-  <title>Archives: 2020 | 知识铺</title>
+  <title>JVM基础：jvisualvm工具使用 | 知识铺</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="知识铺,一个知识分享，积累，整理的地方。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="知识铺">
-<meta property="og:url" content="https://top.zshipu.com/archives/2020/page/4/index.html">
+  <meta name="description" content="jdk自带监控程序_jvisualvm_的使用_宇宙的博客-CSDN博客_jvi… 2018年8月12日 进入到本地的jdk安装目录下,找到jvisualvm.exe,双击打开 建立远程连接 图一 添加远程 图二 建立远程主机ip 图三 添加jmx连接 图四 双击建立好的连接可以实时查看… JVisualVM 简介_gw的博客-CSDN博客 2020年4月21日 在JDK_HOME&#x2F;bin(默认是">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JVM基础：jvisualvm工具使用">
+<meta property="og:url" content="https://top.zshipu.com/2020/10/29/JVM%E5%9F%BA%E7%A1%80%EF%BC%9Ajvisualvm%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/index.html">
 <meta property="og:site_name" content="知识铺">
-<meta property="og:description" content="知识铺,一个知识分享，积累，整理的地方。">
+<meta property="og:description" content="jdk自带监控程序_jvisualvm_的使用_宇宙的博客-CSDN博客_jvi… 2018年8月12日 进入到本地的jdk安装目录下,找到jvisualvm.exe,双击打开 建立远程连接 图一 添加远程 图二 建立远程主机ip 图三 添加jmx连接 图四 双击建立好的连接可以实时查看… JVisualVM 简介_gw的博客-CSDN博客 2020年4月21日 在JDK_HOME&#x2F;bin(默认是">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-10-29T08:30:29.000Z">
+<meta property="article:modified_time" content="2020-10-29T08:30:29.415Z">
 <meta property="article:author" content="知识铺">
-<meta property="article:tag" content="知识铺,分享,整理">
+<meta property="article:tag" content="jvm">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="知识铺" type="application/atom+xml">
@@ -188,295 +190,224 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-JVM基础：jvisualvm工具使用" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      JVM基础：jvisualvm工具使用
+    </h1>
+  
+
+        
+        <a href="/2020/10/29/JVM%E5%9F%BA%E7%A1%80%EF%BC%9Ajvisualvm%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/" class="archive-article-date">
+  	<time datetime="2020-10-29T08:30:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-29</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="jdk自带监控程序-jvisualvm-的使用-宇宙的博客-CSDN博客-jvi…"><a href="#jdk自带监控程序-jvisualvm-的使用-宇宙的博客-CSDN博客-jvi…" class="headerlink" title="jdk自带监控程序_jvisualvm_的使用_宇宙的博客-CSDN博客_jvi…"></a><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://blog.csdn.net/u012550080/article/details/81605189">jdk自带监控程序_jvisualvm_的使用_宇宙的博客-CSDN博客_jvi…</a></h3><p> 2018年8月12日 进入到本地的jdk安装目录下,找到<em>jvisualvm</em>.exe,双击打开 建立远程连接 图一 添加远程 图二 建立远程主机ip 图三 添加jmx连接 图四 双击建立好的连接可以实时查看…</p>
+<h3 id="JVisualVM-简介-gw的博客-CSDN博客"><a href="#JVisualVM-简介-gw的博客-CSDN博客" class="headerlink" title="JVisualVM 简介_gw的博客-CSDN博客"></a><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://blog.csdn.net/gw5205566/article/details/105666637"><em>JVisualVM</em> 简介_gw的博客-CSDN博客</a></h3><p> 2020年4月21日 在JDK_HOME/bin(默认是C:\Program Files\Java\jdk1.6.0_13\bin)目录下面,有一个<em>jvisualvm</em>.exe文件,双击打开,从UI上来看,这个软件是基于NetBeans开发的了。</p>
+<h3 id="Jvisualvm-简单使用教程-smileNicky-开发者的网上家园"><a href="#Jvisualvm-简单使用教程-smileNicky-开发者的网上家园" class="headerlink" title="_Jvisualvm_简单使用教程 - smileNicky - 开发者的网上家园"></a><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://www.cnblogs.com/mzq123/p/11166640.html">_Jvisualvm_简单使用教程 - smileNicky - 开发者的网上家园</a></h3><p> 2019年7月10日 本博客介绍一下<em>jvisualvm_的简单使用教程,_jvisualvm_功能还是挺多的,不过本博客之简单介绍一下 1、拿线程快照信息 在jdk安装目录找到_jvisualvm</em>.exe,${JDK_HOME}\</p>
+<h3 id="jvisualvm-工具使用-milkty-博客园"><a href="#jvisualvm-工具使用-milkty-博客园" class="headerlink" title="jvisualvm 工具使用 - milkty - 博客园"></a><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://www.cnblogs.com/kongzhongqijing/articles/3625340.html"><em>jvisualvm</em> 工具使用 - milkty - 博客园</a></h3><p> 2014年12月2日 <em>VisualVM</em> 是Netbeans的profile子项目,已在JDK6.0 update 7 中自带(java启动时不需要特定参数,监控工具在bin…</p>
+<h3 id="利用-jvisualvm-分析JVM-进行性能调优-云栖社区-阿里云"><a href="#利用-jvisualvm-分析JVM-进行性能调优-云栖社区-阿里云" class="headerlink" title="利用_jvisualvm_分析JVM,进行性能调优-云栖社区-阿里云"></a><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://yq.aliyun.com/articles/693352">利用_jvisualvm_分析JVM,进行性能调优-云栖社区-阿里云</a></h3><p> 2019年3月12日 什么是<em>jvisualvm</em>? _jvisualvm_是JDK自带分析工具。可分析JDK1.6及其以上版本的JVM运行时的JVM参数、系统参数、堆栈、CPU使用等信息。可分析本地应用及远程应用。在JDK1.6…</p>
+<style data-vue-ssr-id="6f98630d:0">.list_1V4Yg { margin-left: -16px; max-height: 52px; overflow: hidden; } .item_3WKCf { display: inline-block; margin-left: 16px; }</style>
+
+<h3 id="jvisualvm"><a href="#jvisualvm" class="headerlink" title="jvisualvm"></a><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://docs.oracle.com/javase/8/docs/technotes/tools/unix/jvisualvm.html"><em>jvisualvm</em></a></h3><p> This document contains reference information for the tools that are installed with Java Development Kit (JDK).</p>
+<h3 id="jvisualvm-的使用简介-百度经验"><a href="#jvisualvm-的使用简介-百度经验" class="headerlink" title="_jvisualvm_的使用简介 - 百度经验"></a><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://jingyan.baidu.com/article/d2b1d1023a3d041c7e37d4a6.html">_jvisualvm_的使用简介 - 百度经验</a></h3><p> 2019年7月24日 _jvisualvm_的使用简介,jviualvm是JDK提供的一个JVM运行监控工具,可用于查看dum文件,CPU及内存的占用情况,GC垃圾回收情况等信息,这篇经验就告诉你如何使…</p>
+<h3 id="jvisualvm-易学教程"><a href="#jvisualvm-易学教程" class="headerlink" title="jvisualvm | 易学教程"></a><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://www.e-learn.cn/tag/jvisualvm?page=1"><em>jvisualvm</em> | 易学教程</a></h3><p> 2019年12月21日 阅读更多 关于How do you run <em>jvisualvm</em>.exe under the local system account under Windows Server 2008? 问题I’ve been looking for a comparable a…</p>
+<h3 id="jvisualvm-工具-简书"><a href="#jvisualvm-工具-简书" class="headerlink" title="_jvisualvm_工具 - 简书"></a><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://www.jianshu.com/p/9996302faec0">_jvisualvm_工具 - 简书</a></h3><p> 本文主要是介绍_jvisualvm_工具的开启以及远程使用!1、在服务器上设置jmx参数vim /etc/profile #添加 export JAVA_OPTS=’-Djava.rmi.server.hostname=192.250.110…</p>
+<h3 id="JVM调试工具-jvisualvm-愤怒的小兵-CSDN博客"><a href="#JVM调试工具-jvisualvm-愤怒的小兵-CSDN博客" class="headerlink" title="JVM调试工具-_jvisualvm__愤怒的小兵-CSDN博客"></a><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://pandora.blog.csdn.net/article/details/108705472">JVM调试工具-_jvisualvm__愤怒的小兵-CSDN博客</a></h3><p> 2020年9月21日 _jvisualvm_配置安装上传tomcat至服务器并解压&gt; tar -xf apache-tomcat-9.0.14.tar.gz&gt; cd apache-tomcat-9.0.14/bin修改catalina.sh,添加如下语…</p>
+<h3 id="java开发中如何使用-JVisualVM-进行性能分析-java-脚本之家"><a href="#java开发中如何使用-JVisualVM-进行性能分析-java-脚本之家" class="headerlink" title="java开发中如何使用_JVisualVM_进行性能分析_java_脚本之家"></a><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://www.jb51.net/article/77131.htm">java开发中如何使用_JVisualVM_进行性能分析_java_脚本之家</a></h3><p> 2015年12月29日 _JVisualVM_是由Sun提供的性能分析工具,如此强大的后盾怎能不强大?在Jdk6.0以后的版本中是自带的,配置好环境变量然后在运行中输入“_JVisualVm_”或直接到Jdk的安装目录的…</p>
+<h3 id="基于-JVisualVM-的可视化监控-端碗吹水-51CTO博客"><a href="#基于-JVisualVM-的可视化监控-端碗吹水-51CTO博客" class="headerlink" title="基于_JVisualVM_的可视化监控-端碗吹水-51CTO博客"></a><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://blog.51cto.com/zero01/2141942">基于_JVisualVM_的可视化监控-端碗吹水-51CTO博客</a></h3><p> 2018年7月13日 监控本地的java进程本小节我们介绍一下如何使用JDK自带的_jvisualvm_工具来监控本地的Java进程,该工具是一个图形化的监控工具。_jvisualvm_官方文档地址如下:https://…</p>
+<h3 id="性能测试之-jvisualvm-监控分析-51Testing软件测试网"><a href="#性能测试之-jvisualvm-监控分析-51Testing软件测试网" class="headerlink" title="性能测试之_jvisualvm_监控分析 - 51Testing软件测试网"></a><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=http://www.51testing.com/html/38/n-3724238.html">性能测试之_jvisualvm_监控分析 - 51Testing软件测试网</a></h3><p> 2018年2月1日 <em>jvisualvm</em> 通过检测 JVM 中加载的类和对象信息等帮助分析内存使用情况,可以通过 _jvisualvm_的监视标签和 抽样器对应用程序进行内存分析。下面以分析内存泄漏为例。 性能…</p>
+<h3 id="jconsole与-jvisualvm-JVM教程-田守枝Java技术博客"><a href="#jconsole与-jvisualvm-JVM教程-田守枝Java技术博客" class="headerlink" title="jconsole与_jvisualvm__JVM教程_田守枝Java技术博客"></a><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=http://www.tianshouzhi.com/api/tutorials/jvm/352">jconsole与_jvisualvm__JVM教程_田守枝Java技术博客</a></h3><p> 2017年2月14日 _jvisualvm_同jconsole都是一个基于图形化界面的、可以查看本地及远程的JAVA GUI监控工具,可以认为_jvisualvm_是jconsole的升级版,因此这里不再介绍jconso…</p>
+<h3 id="jvisualvm-其它代码类资源-CSDN下载"><a href="#jvisualvm-其它代码类资源-CSDN下载" class="headerlink" title="jvisualvm-其它代码类资源-CSDN下载"></a><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://download.csdn.net/download/weixin_38669628/11496256"><em>jvisualvm</em>-其它代码类资源-CSDN下载</a></h3><p> 2020年3月26日 Java性能调优:利用VisualVM进行性能分析 149_JVisualVM_ 简介VisualVM 是Netbeans的profile子项目,已在JDK6.0 update 7 中自带,能够监控线程,内存情况,…</p>
+<h3 id="JVisualVM-jvisualvm-jvisualvm-exe-云-社区-腾讯云"><a href="#JVisualVM-jvisualvm-jvisualvm-exe-云-社区-腾讯云" class="headerlink" title="JVisualVM___jvisualvm___jvisualvm.exe - 云+社区 - 腾讯云"></a><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://cloud.tencent.com/developer/information/JVisualVM"><em>JVisualVM___jvisualvm___jvisualvm</em>.exe - 云+社区 - 腾讯云</a></h3><p> <em>Jvisualvm_简单使用教程 本博客介绍一下_jvisualvm_的简单使用教程,_jvisualvm_功能还是挺多的,不过本博客之简单介绍一下1、拿线程快照信息在jdk安装目录找到_jvisualvm</em>.exe,$…</p>
+<h3 id="jvisualvm-易学教程-1"><a href="#jvisualvm-易学教程-1" class="headerlink" title="jvisualvm | 易学教程"></a><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://www.e-learn.cn/tag/jvisualvm?page=1"><em>jvisualvm</em> | 易学教程</a></h3><p> 2019年12月21日 阅读更多 关于How do you run <em>jvisualvm</em>.exe under the local system account under Windows Server 2008? 问题I’ve been looking for a comparable a…</p>
+<h3 id="JVisualVM-Smartbi-V6-帮助中心-Smartbi-在线知识中心"><a href="#JVisualVM-Smartbi-V6-帮助中心-Smartbi-在线知识中心" class="headerlink" title="JVisualVM - Smartbi V6 帮助中心 - Smartbi 在线知识中心"></a><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://wiki.smartbi.com.cn/display/SmartbiV6/JVisualVM"><em>JVisualVM</em> - Smartbi V6 帮助中心 - Smartbi 在线知识中心</a></h3><p> 2016年6月16日 <em>JVisualVM</em> 本身是一个 Java 应用,所以打开 <em>JVisualVM</em> 看到的第一个可监控应用就是它本身。_JVisualVM_还会列举出当前机器上运行的所有Java应用,它会显示…</p>
+<h3 id="What-Is-jvisualvm-Java-VisualVM"><a href="#What-Is-jvisualvm-Java-VisualVM" class="headerlink" title="What Is jvisualvm (Java VisualVM)?"></a><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=http://www.herongyang.com/Java-Tools/jvisualvm-What-Is-Java-VisualVM.html">What Is <em>jvisualvm</em> (Java VisualVM)?</a></h3><p> This section describes the Java VisualVM ‘<em>jvisualvm</em>‘, which is visual interface for viewing detailed information about Java applications while they are …</p>
+<h3 id="jvisualvm-工具-链滴"><a href="#jvisualvm-工具-链滴" class="headerlink" title="jvisualvm 工具 - 链滴"></a><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://hacpai.com/article/1547617174086"><em>jvisualvm</em> 工具 - 链滴</a></h3><p> 2019年1月16日 [图片] 本文主要是介绍 <em>jvisualvm</em> 工具的开启以及远程使用! 1、在服务器上设置 jmx 参数 vim /etc/profile #添加 export JAVA_OPTS=’-Djava.rmi.serve…</p>
+<h3 id="jvisualvm-Java-VisualVM-半路猿-CSDN博客"><a href="#jvisualvm-Java-VisualVM-半路猿-CSDN博客" class="headerlink" title="jvisualvm (Java VisualVM)_半路猿-CSDN博客"></a><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://blog.csdn.net/aiwaston/article/details/104936473"><em>jvisualvm</em> (Java VisualVM)_半路猿-CSDN博客</a></h3><p> 2020年3月18日 文章来源:<a target="_blank" rel="noopener" href="https://blog.csdn.net/a19881029/article/details/8432368">https://blog.csdn.net/a19881029/article/details/8432368</a> _jvisualvm_能干什么:监控内存泄露,跟踪垃圾回收,执行时…</p>
+<h3 id="jvisualvm-不花的花和尚的博客-花和尚也有春天-CSDN博客"><a href="#jvisualvm-不花的花和尚的博客-花和尚也有春天-CSDN博客" class="headerlink" title="_jvisualvm__不花的花和尚的博客_花和尚也有春天-CSDN博客"></a><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://blog.csdn.net/weixin_38750084/article/category/8252126">_jvisualvm__不花的花和尚的博客_花和尚也有春天-CSDN博客</a></h3><p> 2018年10月23日 jvm: <em>jvisualvm_简要说明,_jvisualvm</em>,jvm… 转载 jvm: _jvisualvm_简要说明 _jvisualvm_能干什么:监控内存泄露,跟踪垃圾回收,执行时内存、cpu分析,线程分析… _jvisualvm_已经…</p>
+<h3 id="jvisualvm-Java-Virtual-Machine-Monitoring-Troublesh…"><a href="#jvisualvm-Java-Virtual-Machine-Monitoring-Troublesh…" class="headerlink" title="jvisualvm - Java Virtual Machine Monitoring, Troublesh…"></a><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://docs.oracle.com/javase/6/docs/technotes/tools/share/jvisualvm.html"><em>jvisualvm</em> - Java Virtual Machine Monitoring, Troublesh…</a></h3><p> <em>jvisualvm</em> [ options ] PARAMETERS Options, if used, should follow immediately after the command name. Options may be in any order. For a discussion of …</p>
+<h3 id="jvisualvm-使用-bug先僧的博客-CSDN博客"><a href="#jvisualvm-使用-bug先僧的博客-CSDN博客" class="headerlink" title="jvisualvm 使用_bug先僧的博客-CSDN博客"></a><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://blog.csdn.net/laihongming/article/details/90992851"><em>jvisualvm</em> 使用_bug先僧的博客-CSDN博客</a></h3><p> 2019年6月6日 本地jdk下的bin目录下<em>jvisualvm</em>.exe,监测远程服务器1、如果是tomcat,则需要catalina.sh文件中新增CATALINA_OPTS=”$CATALINA_OPTS -Dcom.sun.management.jmxremote=…</p>
+<h3 id="Jvisualvm-简单使用教程-简书"><a href="#Jvisualvm-简单使用教程-简书" class="headerlink" title="_Jvisualvm_简单使用教程 - 简书"></a><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://www.jianshu.com/p/7958eead8cc8">_Jvisualvm_简单使用教程 - 简书</a></h3><p> 2019年7月10日 本博客介绍一下<em>jvisualvm_的简单使用教程,_jvisualvm_功能还是挺多的,不过本博客之简单介绍一下 1、拿线程快照信息 在jdk安装目录找到_jvisualvm</em>.exe…</p>
+<h3 id="jvisualVM-的使用-技术研究与问题解决-博客园"><a href="#jvisualVM-的使用-技术研究与问题解决-博客园" class="headerlink" title="_jvisualVM_的使用 - 技术研究与问题解决 - 博客园"></a><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://www.cnblogs.com/liuys635/p/10240428.html">_jvisualVM_的使用 - 技术研究与问题解决 - 博客园</a></h3><p> 2019年1月8日 _jvisualvm_能干什么:监控内存泄露,跟踪垃圾回收,执行时内存、cpu分析,线程分析… _jvisualvm_已经被集成在jdk1.6以上的版本中(不是jre)。自身运行需要最…</p>
+<h3 id="jvisualVM-missA-fei的博客-CSDN博客"><a href="#jvisualVM-missA-fei的博客-CSDN博客" class="headerlink" title="_jvisualVM__missA_fei的博客-CSDN博客"></a><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://blog.csdn.net/missA_fei/article/details/88559579">_jvisualVM__missA_fei的博客-CSDN博客</a></h3><p> 2019年3月14日 <em>jvisualvm</em> 工具使用VisualVM 是Netbeans的profile子项目,已在JDK6.0 update 7 中自带(java启动时不需要特定参数,监控工具在bin/<em>jvisualvm</em>.exe)。<a target="_blank" rel="noopener" href="https://visualvm/">https://visualvm</a>…</p>
+<h3 id="jvisualvm-java线程监控-使用手册-百度文库"><a href="#jvisualvm-java线程监控-使用手册-百度文库" class="headerlink" title="jvisualvm(java线程监控)使用手册_百度文库"></a><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://wenku.baidu.com/view/955abc73f242336c1eb95e76.html"><em>jvisualvm</em>(java线程监控)使用手册_百度文库</a></h3><p> <em>jvisualvm</em> 使用手册一、VisualVM 简介 VisualVM,能够监控线程,内存情况,查看方法的 CPU 时间和内存中的对 象,已被 GC 的对象,反向查看分配的堆栈(如 100 个 …</p>
+<h3 id="java开发中如何使用-JVisualVM-进行性能分析-java-脚本之家-1"><a href="#java开发中如何使用-JVisualVM-进行性能分析-java-脚本之家-1" class="headerlink" title="java开发中如何使用_JVisualVM_进行性能分析_java_脚本之家"></a><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://www.jb51.net/article/77131.htm">java开发中如何使用_JVisualVM_进行性能分析_java_脚本之家</a></h3><p> 2015年12月29日 _JVisualVM_是由Sun提供的性能分析工具,如此强大的后盾怎能不强大?在Jdk6.0以后的版本中是自带的,配置好环境变量然后在运行中输入“_JVisualVm_”或直接到Jdk的安装目录的…</p>
+<h3 id="jvisualvm-插件-Java工具类资源-CSDN下载"><a href="#jvisualvm-插件-Java工具类资源-CSDN下载" class="headerlink" title="_jvisualvm_插件-Java工具类资源-CSDN下载"></a><a target="_blank" rel="noopener" href="https://zshipu.com/t?url=https://download.csdn.net/download/lienfeng6/10044312">_jvisualvm_插件-Java工具类资源-CSDN下载</a></h3><p> 2020年7月10日 _jvisualvm_的插件,用于检测java虚拟机的参数,_jvisualvm_的插件,用于检测java虚更多下载资源、学习资料请访问CSDN下载频道.</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="http://home.zshipu.com/res%2Fimg%2Falipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="http://home.zshipu.com/res%2Fimg%2Fweixin.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+      <hr><span style="font-style: italic;color: gray;"> 免责声明：本页面内容均来源于站内编辑发布，部分信息来源互联网，并不意味着本站赞同其观点或者证实其内容的真实性，如涉及版权等问题，请立即联系客服进行更改或删除，保证您的合法权益。转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。也可以邮件至 sblig@126.com </span>
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/28/Web%E6%8A%80%E6%9C%AF%EF%BC%9A%E6%88%90%E4%B8%BA%E5%AE%8C%E6%95%B4%E5%A0%86%E6%A0%88%E5%BC%80%E5%8F%91%E4%BA%BA%E5%91%98%E7%9A%84%E8%B7%AF%E7%BA%BF%E5%9B%BE/" class="archive-article-date">
-  	<time datetime="2020-09-28T13:48:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/28/Web%E6%8A%80%E6%9C%AF%EF%BC%9A%E6%88%90%E4%B8%BA%E5%AE%8C%E6%95%B4%E5%A0%86%E6%A0%88%E5%BC%80%E5%8F%91%E4%BA%BA%E5%91%98%E7%9A%84%E8%B7%AF%E7%BA%BF%E5%9B%BE/">Web技术：成为全栈开发人员的路线图</a>
-    </h1>
-  
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">jvm</a>
+        		</li>
+      		
+		</ul>
+	</div>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://top.zshipu.com/2020/10/29/JVM%E5%9F%BA%E7%A1%80%EF%BC%9Ajvisualvm%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/28/Git%E6%8A%80%E6%9C%AF%EF%BC%9AGit%20%E6%B5%81%E4%BB%A5%E5%8F%8A%E6%AD%A3%E7%A1%AE%E7%BB%B4%E6%8A%A4%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95/" class="archive-article-date">
-  	<time datetime="2020-09-28T13:39:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-28</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/10/19/JavaScript%E5%9F%BA%E7%A1%80%EF%BC%9A%E5%BF%AB%E9%80%9F%E6%9F%A5%E7%9C%8B%20JavaScript%20%E4%B8%AD%E7%9A%84%20forEach%20%E6%96%B9%E6%B3%95/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JavaScript基础：快速查看 JavaScript 中的 forEach 方法</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/28/Git%E6%8A%80%E6%9C%AF%EF%BC%9AGit%20%E6%B5%81%E4%BB%A5%E5%8F%8A%E6%AD%A3%E7%A1%AE%E7%BB%B4%E6%8A%A4%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95/">Git技术：Git 流以及正确维护历史记录</a>
-    </h1>
+        
+        
+    </div>
+</aside>
+
+
+
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/28/%E5%8D%81%E5%A4%A7%E5%BC%80%E5%8F%91%E8%80%85%E8%B6%8B%E5%8A%BF%EF%BC%8C%E5%91%A8%E6%97%A5%209%20%E6%9C%88%2027%20%E6%97%A5%202020/" class="archive-article-date">
-  	<time datetime="2020-09-28T13:34:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/28/%E5%8D%81%E5%A4%A7%E5%BC%80%E5%8F%91%E8%80%85%E8%B6%8B%E5%8A%BF%EF%BC%8C%E5%91%A8%E6%97%A5%209%20%E6%9C%88%2027%20%E6%97%A5%202020/">十大开发者趋势，周日 9 月 27 日 2020</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/28/Java%20%E7%83%AD%E7%82%B9%E6%96%87%E7%AB%A0%202020%E5%B9%B49%E6%9C%8828%E6%97%A5/" class="archive-article-date">
-  	<time datetime="2020-09-28T09:51:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/28/Java%20%E7%83%AD%E7%82%B9%E6%96%87%E7%AB%A0%202020%E5%B9%B49%E6%9C%8828%E6%97%A5/">Java 热点文章 2020年9月28日</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/26/Java%20JVM%20%E7%83%AD%E7%82%B9%E6%96%87%E7%AB%A0%202020%E5%B9%B49%E6%9C%8826%E6%97%A5/" class="archive-article-date">
-  	<time datetime="2020-09-26T11:54:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/26/Java%20JVM%20%E7%83%AD%E7%82%B9%E6%96%87%E7%AB%A0%202020%E5%B9%B49%E6%9C%8826%E6%97%A5/">Java JVM 热点文章 2020年9月26日</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/26/Spring%20Boot%20%E7%83%AD%E7%82%B9%E6%96%87%E7%AB%A0%202020%E5%B9%B49%E6%9C%8826%E6%97%A5/" class="archive-article-date">
-  	<time datetime="2020-09-26T11:51:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/26/Spring%20Boot%20%E7%83%AD%E7%82%B9%E6%96%87%E7%AB%A0%202020%E5%B9%B49%E6%9C%8826%E6%97%A5/">Spring Boot 热点文章 2020年9月26日</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/26/Nacos%20%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0%202020%E5%B9%B49%E6%9C%8826%E6%97%A5/" class="archive-article-date">
-  	<time datetime="2020-09-26T11:50:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/26/Nacos%20%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0%202020%E5%B9%B49%E6%9C%8826%E6%97%A5/">Nacos 热门文章 2020年9月26日</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/26/Node.js%20%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0%202020%E5%B9%B49%E6%9C%8826%E6%97%A5/" class="archive-article-date">
-  	<time datetime="2020-09-26T11:49:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/26/Node.js%20%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0%202020%E5%B9%B49%E6%9C%8826%E6%97%A5/">Node.js 热门文章 2020年9月26日</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/26/MyBatis%20%E7%83%AD%E7%82%B9%E6%96%87%E7%AB%A0%202020%E5%B9%B49%E6%9C%8826%E6%97%A5/" class="archive-article-date">
-  	<time datetime="2020-09-26T11:31:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/26/MyBatis%20%E7%83%AD%E7%82%B9%E6%96%87%E7%AB%A0%202020%E5%B9%B49%E6%9C%8826%E6%97%A5/">MyBatis 热点文章 2020年9月26日</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/26/Java%20%E9%9D%A2%E8%AF%95%20%E7%83%AD%E7%82%B9%E6%96%87%E7%AB%A0%202020%E5%B9%B49%E6%9C%8826%E6%97%A5/" class="archive-article-date">
-  	<time datetime="2020-09-26T11:26:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/26/Java%20%E9%9D%A2%E8%AF%95%20%E7%83%AD%E7%82%B9%E6%96%87%E7%AB%A0%202020%E5%B9%B49%E6%9C%8826%E6%97%A5/">Java 面试 热点文章 2020年9月26日</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/2020/page/3/">&amp;laquo; Prev</a><a class="page-number" href="/archives/2020/">1</a><a class="page-number" href="/archives/2020/page/2/">2</a><a class="page-number" href="/archives/2020/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/archives/2020/page/5/">5</a><a class="page-number" href="/archives/2020/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2020/page/8/">8</a><a class="extend next" rel="next" href="/archives/2020/page/5/">Next &amp;raquo;</a>
-    </nav>
+  <div id="gitment-ctn"></div> 
+<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: "https://top.zshipu.com/2020/10/29/JVM%E5%9F%BA%E7%A1%80%EF%BC%9Ajvisualvm%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/",
+  owner: 'liliang8858',
+  repo: 'zspblogcomment',
+  oauth: {
+    client_id: 'ec3adfa1a072fdaa4d91',
+    client_secret: '7a84a35d6d8bce205398c3d5d7f6ee1ce8e1ab53',
+  },
+})
+gitment.render('gitment-ctn')
+</script>
   
 
 
@@ -501,8 +432,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
